@@ -1,0 +1,39 @@
+[user]
+  name = Abhishek Rai
+	email = abhishekrai@gmail.com
+  username = abhishekrai
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[pull]
+	rebase = true
+[color]
+	ui = auto
+[core]
+	editor = vim
+	trustctime = false
+	pager = less -x2
+[alias]
+	last = log -1 HEAD
+	l = "log --graph --pretty=format:'%C(#cb6614)%h %C(blue)%cd %C(reset)%s %C(#0a8000)[%an] %C(red)%d' --decorate --date=short"
+	la = !git lg --date-order --all 2> /dev/null
+	lb = log --graph --simplify-by-decoration
+	lba = !git lb --all 
+	st = status -sb
+
+[diff]
+	tool = vimdiff
+	mnemonicprefix = true
+[difftool]
+	prompt = false
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+[rerere]
+	enabled = true
+[help]
+	autocorrect = 1
+[mergetool]
+	prompt = false
