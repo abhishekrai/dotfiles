@@ -529,10 +529,6 @@ set wildmode=longest,list,full
 noremap , <C-w><C-h>
 noremap . <C-w><C-w>
 
-" Markdown syntax highlighting
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-
 " Detect .md files as markdown (by default they are detected as modula)
 augroup markdown
     au!

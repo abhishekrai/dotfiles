@@ -25,13 +25,13 @@ alias grepmd='grep -nr --include "*md" --exclude-dir bazel-* --exclude-dir bin '
 alias grepi='grep -i'
 grepnc='grep --color=never'
 alias man='man -a'
-alias l='ls -CF'
-alias la='ls -A'
-alias ll='ls -alF'
 # Note: the default colors use a very dark hue of blue to show directory
 # names, this one works better.
 export LSCOLORS=ExFxBxDxCxegedabagacad
-alias ls='ls -G'
+alias ls='ls --color=auto'
+alias l='ls --color=auto'
+alias la='ls -A --color=auto'
+alias ll='ls -alF --color=auto'
 alias pd='pushd'
 alias lynx='lynx -accept_all_cookies'
 function rmcolor {
@@ -141,6 +141,7 @@ alias k='kubectl'
 
 # Misc
 alias myip='wget http://ipinfo.io/ip -qO -'
+alias ns='cd ~/work/netspring'
 
 function top {
 	if [[ "$OSTYPE" == "darwin"* ]]; then
