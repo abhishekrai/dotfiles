@@ -48,6 +48,9 @@ alias xv='rmcolor | gfiles | xvim'
 function xo {
   find . -name "*$1*" | xv
 }
+function filter-long {
+  awk 'length($0) < 200'
+}
 function typora {
   # typora cannot create a non-existent file.
   touch $1
@@ -141,7 +144,7 @@ alias k='kubectl'
 
 # Misc
 alias myip='wget http://ipinfo.io/ip -qO -'
-alias ns='cd ~/work/netspring'
+alias n='cd ~/work/netspring'
 
 function top {
 	if [[ "$OSTYPE" == "darwin"* ]]; then
